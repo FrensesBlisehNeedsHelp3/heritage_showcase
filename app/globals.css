@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand text-ink font-body antialiased;
+}
+
+/* Visible only to keyboard/screen-reader users until focused — WCAG 2.1 bypass-blocks (2.4.1) */
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100]
+    focus:rounded-full focus:bg-ink focus:px-5 focus:py-2 focus:text-sm focus:text-sand;
+}
+
+/* Consistent, visible focus ring for every interactive element (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #c9a06a;
+  outline-offset: 3px;
+}
+
+/* Below 640px, the Heritage Grid's card row becomes a horizontal
+   snap-scroll carousel (see organisms/HeritageGrid.tsx) so the section
+   never needs to scroll vertically. Hides the scrollbar since swiping
+   is the intended gesture there — the same content is still fully
+   reachable by keyboard (Tab moves focus card to card, which browsers
+   auto-scroll into view). */
+.snap-x::-webkit-scrollbar {
+  display: none;
+}
+.snap-x {
+  scrollbar-width: none;
+}
