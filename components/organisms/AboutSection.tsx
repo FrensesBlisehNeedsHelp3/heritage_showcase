@@ -34,7 +34,7 @@ export default function AboutSection() {
       <div className="mx-auto grid w-full max-w-content grid-cols-1 items-center gap-3 px-6 sm:gap-8 sm:px-10 lg:grid-cols-2 lg:gap-16">
         <div className="relative aspect-[4/5] max-h-[30svh] w-full overflow-hidden rounded-2xl sm:max-h-[46svh] lg:max-h-none">
           <Image
-            src="/images/card4.png"
+            src="/images/card4.jpg"
             alt="Collage of Pangasinan's three heritage sites: Balungao Hot Spring, Bolinao Lighthouse, and the Hundred Islands"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
